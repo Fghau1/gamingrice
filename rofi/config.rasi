@@ -1,0 +1,92 @@
+/*
+ * ============================================================
+ *          👾 ROFI — ARCADE // DOOM (CRT terminal)
+ *   Green phosphor on black. No icons. No rounding.
+ * ============================================================
+ */
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: false;
+    display-drun: "GAMES";
+    display-run: "RUN";
+    display-window: "PLAYERS";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+* {
+    bg:     #0A0A0A;
+    bg-alt: #131313;
+    green:  #39FF14;
+    red:    #FF2A2A;
+    dim:    #333333;
+
+    background-color: @bg;
+    text-color: @green;
+}
+
+window {
+    width: 480px;
+    border: 3px;
+    border-color: @green;
+    border-radius: 0px;
+    background-color: @bg;
+    padding: 18px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [
+        inputbar,
+        listview
+    ];
+    spacing: 14px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border: 0px 0px 2px 0px;
+    border-color: @green;
+    padding: 10px;
+    children: [
+        prompt,
+        entry
+    ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @red;
+    padding: 0px 10px 0px 0px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @green;
+    placeholder: "INSERT COIN";
+    placeholder-color: @dim;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 2px;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px 10px;
+    background-color: transparent;
+    text-color: @green;
+}
+
+element selected {
+    background-color: @green;
+    text-color: @bg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}

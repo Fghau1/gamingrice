@@ -1,0 +1,70 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+        "source": " ██████╗  ██████╗  ██████╗ ███╗   ███╗\n ██╔══██╗██╔═══██╗██╔═══██╗████╗ ████║\n ██║  ██║██║   ██║██║   ██║██╔████╔██║\n ██║  ██║██║   ██║██║   ██║██║╚██╔╝██║\n ██████╔╝╚██████╔╝╚██████╔╝██║ ╚═╝ ██║\n ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝     ╚═╝",
+        "color": {
+            "1": "red",
+            "2": "green"
+        }
+    },
+    "display": {
+        "separator": " // ",
+        "color": {
+            "keys": "cyan",
+            "title": "red"
+        },
+        "key": {
+            "width": 12
+        }
+    },
+    "modules": [
+        "title",
+        "separator",
+        {
+            "type": "os",
+            "key": "SYSTEM"
+        },
+        {
+            "type": "kernel",
+            "key": "ROM VER"
+        },
+        {
+            "type": "uptime",
+            "key": "PLAY TIME"
+        },
+        {
+            "type": "packages",
+            "key": "ASSETS"
+        },
+        {
+            "type": "shell",
+            "key": "CABINET"
+        },
+        {
+            "type": "wm",
+            "key": "DISPLAY"
+        },
+        {
+            "type": "terminal",
+            "key": "CRT"
+        },
+        {
+            "type": "cpu",
+            "key": "CPU CHIP"
+        },
+        {
+            "type": "gpu",
+            "key": "GPU VDP"
+        },
+        {
+            "type": "memory",
+            "key": "RAM"
+        },
+        "separator",
+        {
+            "type": "colors",
+            "symbol": "block"
+        }
+    ]
+}

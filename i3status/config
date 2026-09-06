@@ -1,0 +1,47 @@
+general {
+    colors = true
+    interval = 2
+    color_good = "#39FF14"
+    color_bad = "#FF2A2A"
+    color_degraded = "#FF6A00"
+}
+
+order += "read_file music"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "volume master"
+order += "tztime local"
+
+read_file music {
+    path = "/tmp/music_info"
+    format = "♪ %content"
+}
+
+wireless _first_ {
+    format_up = "NET %essid"
+    format_down = "NET --"
+}
+
+ethernet _first_ {
+    format_up = "LAN UP"
+    format_down = "LAN --"
+}
+
+battery all {
+    format = "HP %percentage"
+    format_down = "HP N/A"
+    status_chr = "CHG"
+    status_bat = ""
+    status_full = "FULL"
+}
+
+volume master {
+    format = "AP %volume"
+    format_muted = "AP OFF"
+    device = "default"
+}
+
+tztime local {
+    format = "%H:%M"
+}
